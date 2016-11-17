@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie|Amatic+SC');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+html {
+    background: url(purty_wood.png);
+}
+.fixedheader {
+    position: fixed;
+    top: 0;
+    bottom: auto;
+    z-index: 10;
+    height: 110px;
+    width: 100%;
+    margin-top: 20px;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.2));
+    color: white;
+    text-align: center;
+    font-family: "Amatic SC", cursive, Trebuchet MS, sans-serif;
+}
+.fixedheader .headline1 {
+    font-size: 4em;
+}
+.fixedheader .headline2 {
+    font-size: 1em;
+}
+ul {
+    list-style-type: none;
+    margin-top: 140px;
+}
+.ppbox {
+    position: relative;
+}
+picture,
+img {
+    max-width: 90%;
+}
+img {
+    display: block;
+    margin: 0 auto;
+    padding: 12px 12px 42px 12px;
+    background: #eee;
+    border: 1px solid #fff;
+    box-shadow: 0px 2px 15px #333;
+    position: relative;
+}
+.ppbox p {
+    width: 100%;
+    position: absolute;
+    bottom: 8px;
+    background: transparent;
+    text-align: center;
+    font-family: "Reenie Beanie", cursive, Trebuchet MS, sans-serif;
+}
+img.stage,
+p.stagep {
+    z-index: 1;
+    transform: rotate(-10deg);
+}
+img.crowd,
+p.crowdp {
+    z-index: 5;
+    transform: rotate(6deg);
+}
+img.guitar,
+p.guitarp {
+    z-index: 7;
+    transform: rotate(-3deg);
+}
+img.carrots,
+p.carrotsp {
+    z-index: 4;
+    transform: rotate(12deg);
+}
+img.castlerock,
+p.castlerockp {
+    z-index: 2;
+    transform: rotate(5deg);
+}
+img.rock,
+p.rockp {
+    z-index: 3;
+    transform: rotate(-18deg);
+}
+img.pakistan,
+p.pakistanp {
+    z-index: 6;
+    transform: rotate(15deg);
+}
+picture:hover ~ p {
+    z-index: 9;
+}
+picture:hover > img {
+    z-index: 8;
+    box-shadow: 3px 5px 15px #111;
+}
+
+@media screen and (max-width: 600px) {
+    .fixedheader .headline1 {
+        padding-top: 30px;
+        font-size: 2.5em;
+    }
+    .fixedheader .headline2 {
+        font-size: 0.5em;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1200px) {
+    ul:after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    li {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    ul:after {
+        content: "";
+        display: block;
+        clear: left;
+    }
+    li {
+        width: 25%;
+        float: left;
+    }
+}
